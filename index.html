@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>🐟 Ohana Poke 🐟</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div id="main_menu">
+    <div class="logo_area">
+      <a href=""><img id="logo_main" src="img/pokeLogo.jpg" alt=""></a>
+    </div>
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li><a href="index.html" id="nav_home">Home</a></li>
+          <li><a href="about.html" id=nav_About>About</a></li>
+          <li><a href="menu.html" id=nav_menu>Menu</a></li>
+          <li><a href="contact.html" id=nav_contact>Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img class="page-slides" src="img/slide-1.jpg" style="">
+      <div class="text">Fresh fish from the Islands</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img class="page-slides" src="img/slide-2.jpg" style="">
+      <div class="text">Spicy Tuna Poke</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img class="page-slides" src="img/slide-3.jpg" style="">
+      <div class="text">Tonkutsu Ramen</div>
+    </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000);
+    }
+  </script>
+
+  <div class="middle-container">
+    <iframe src="https://www.youtube.com/embed/qcyCSVXkCoc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h2 class="h2-1">
+      What is Poke?
+    </h2>
+    <div class="text1">
+      <strong>Poke (poe-kay)</strong>-Hawaiian for “to section” or “to slice or cut”,
+      is a raw fish salad served as an appetizer in Hawaiian cuisine, and sometimes
+      as an entrée.
+    </div>
+  </div>
+
+
+  <div class="bottom-container">
+    <img class="img-bot-container" src="img/background-2.jpg" alt="">
+    <h2 class="h2-2">
+      OUR VISION
+    </h2>
+    <div class="text2">
+      At <strong>Ohana Poke</strong>, we believe that food should be exciting. Whether you
+      choose one of our creations or invent your own, our quality ingredients
+      will leave you feeling heathy & satisfied.
+    </div>
+  </div>
+
+  <a href="orders.html" class="myButton">ORDER NOW!</a>
+
+  <footer>
+    <img class="footer-logo" src="img/pokeLogo.jpg" alt="">
+    <p class="p1">Copyright &copy; 2017</p>
+  </footer>
+
+</body>
+
+</html>
